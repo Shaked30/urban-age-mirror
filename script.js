@@ -189,5 +189,5 @@ processCards.forEach(card => cardObserver.observe(card));
 // Console message for developers
 // ========================================
 
-console.log('%c🏗️ Urban Age Website', 'font-size: 20px; font-weight: bold; color: #4A90A4;');
-console.log('%cBuilt with ❤️ for Tal, Sagi, and Gilad', 'font-size: 12px; color: #FF6B6B;');
+console.log('%c🏗️ Urban Age Website', 'font-size: 20px; font-weight: bold; color: #C7A770;');
+console.log('%cBuilt with ❤️ for Tal, Sagi, and Gilad', 'font-size: 12px; color: #999999;');
