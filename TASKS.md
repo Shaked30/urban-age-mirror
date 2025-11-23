@@ -13,8 +13,9 @@
 - [ ] **Get Base44 site access** - Username/password for https://urban-age.base44.app
 - [ ] **Get GoDaddy access** - Login credentials or add as authorized user
 - [ ] **Confirm domain name** - What's the final domain URL?
-- [ ] **Team photos** - Photos of Tal, Sagi, Gilad for About section
+- [ ] **Team photos** - Photos of Tal, Sagi, Gilad for About section (need 3 images)
 - [ ] **Logo files** - Vector format (AI, EPS, SVG) if available
+- [ ] **Process team photos with AI** - Once received, enhance/professionalize the 3 team photos using AI tools
 
 ### 🟡 Ready to Start (Once Access Obtained)
 - [ ] **Review Base44 site** - Log in and assess what's built
@@ -137,7 +138,8 @@
 - [ ] Contact page copy
 
 ### Visual Content Needed
-- [ ] Team photos (Tal, Sagi, Gilad)
+- [ ] Team photos (Tal, Sagi, Gilad) - need 3 images
+- [ ] AI-enhanced team photos - professionalize received images
 - [ ] Logo (vector files)
 - [ ] Building/architecture photos
 - [ ] Happy residents/homeowners (stock or real)

@@ -1,0 +1,535 @@
+To: tal@urban-age.com, sagi@urban-age.com, gilad@urban-age.com
+From: shaylee@jordan-ai.com
+Subject: Urban Age Website - Quick Questions to Get Started 🚀
+Content-Type: text/html; charset=utf-8
+
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .email-container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 40px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2563eb;
+            font-size: 28px;
+            margin-bottom: 10px;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #1e40af;
+            font-size: 20px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding: 10px;
+            background-color: #eff6ff;
+            border-left: 4px solid #2563eb;
+        }
+        h3 {
+            color: #374151;
+            font-size: 17px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        .intro {
+            background-color: #fef3c7;
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 30px;
+            border-left: 4px solid #f59e0b;
+        }
+        .section {
+            margin-bottom: 25px;
+        }
+        .question-group {
+            background-color: #f9fafb;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+        }
+        .question {
+            margin: 10px 0;
+            padding: 8px 0;
+        }
+        .checkbox {
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            border: 2px solid #9ca3af;
+            border-radius: 3px;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+        .priority-high {
+            background-color: #fef2f2;
+            border-left: 4px solid #ef4444;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+        }
+        .priority-medium {
+            background-color: #fffbeb;
+            border-left: 4px solid #f59e0b;
+        }
+        .emoji {
+            font-size: 24px;
+            margin-left: 8px;
+        }
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #e5e7eb;
+            color: #6b7280;
+            font-size: 14px;
+        }
+        ul {
+            list-style: none;
+            padding-right: 0;
+        }
+        li {
+            margin: 8px 0;
+            padding-right: 25px;
+            position: relative;
+        }
+        li:before {
+            content: "▸";
+            color: #2563eb;
+            font-weight: bold;
+            position: absolute;
+            right: 0;
+        }
+        strong {
+            color: #1f2937;
+        }
+        .action-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+        .action-box h3 {
+            color: white;
+            margin-top: 0;
+        }
+        .action-box ul li:before {
+            color: #fbbf24;
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <h1>שאלות לאתר Urban Age <span class="emoji">🏗️</span></h1>
+
+        <div class="intro">
+            <p><strong>היי טל, שגיא וגלעד!</strong></p>
+            <p>כדי להתחיל לעבוד על האתר, יש לי כמה שאלות שיעזרו לי לבנות משהו שבאמת מתאים לכם.</p>
+            <p>אין צורך לענות על הכל מיד - אבל ככל שתענו על יותר, כך נתקדם מהר יותר 🚀</p>
+        </div>
+
+        <div class="action-box">
+            <h3>🚨 דחוף - צריך כדי להתחיל</h3>
+            <ul>
+                <li><strong>גישה ל-GoDaddy</strong> - פרטי התחברות או להוסיף אותי כמשתמש מורשה</li>
+                <li><strong>תמונות של הצוות</strong> - תמונות של טל, שגיא וגלעד לחלק "מי אנחנו"</li>
+                <li><strong>לוגו</strong> - קבצים וקטוריים (AI, EPS, SVG) אם יש לכם</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>📝 תוכן וטקסטים</h2>
+
+            <div class="question-group">
+                <h3>רקע על החברה</h3>
+                <div class="question">
+                    <span class="checkbox"></span>
+                    <strong>כמה זמן Urban Age פועלת?</strong>
+                </div>
+                <div class="question">
+                    <span class="checkbox"></span>
+                    <strong>כמה בניינים הערכתם או עזרתם להם?</strong>
+                </div>
+                <div class="question">
+                    <span class="checkbox"></span>
+                    <strong>סיפורי הצלחה או פרויקטים שהושלמו</strong> שאפשר לשתף?
+                </div>
+                <div class="question">
+                    <span class="checkbox"></span>
+                    <strong>מה מייחד את Urban Age</strong> מחברות אחרות שעושות את זה?
+                </div>
+            </div>
+
+            <div class="question-group">
+                <h3>הצוות</h3>
+                <div class="question">
+                    <span class="checkbox"></span>
+                    <strong>ביוגרפיות קצרות</strong> - כמה משפטים על כל אחד מכם?
+                    <ul style="margin-right: 30px; font-size: 14px; color: #6b7280;">
+                        <li>רקע וניסיון</li>
+                        <li>תפקיד ב-Urban Age</li>
+                        <li>למה אתם נלהבים מזה</li>
+                    </ul>
+                </div>
+                <div class="question">
+                    <span class="checkbox"></span>
+                    <strong>סגנון תמונות</strong> - תמונות פרופסיונליות, קז'ואל, או ספונטניות?
+                </div>
+            </div>
+
+            <div class="question-group">
+                <h3>המלצות והוכחות חברתיות</h3>
+                <div class="question">
+                    <span class="checkbox"></span>
+                    <strong>המלצות</strong> מדיירים שעזרתם להם?
+                </div>
+                <div class="question">
+                    <span class="checkbox"></span>
+                    <strong>חברות קבלנות שותפות</strong> שאפשר להזכיר או להציג לוגו?
+                </div>
+                <div class="question">
+                    <span class="checkbox"></span>
+                    <strong>סיקור תקשורתי</strong> או אזכורים בעיתונות?
+                </div>
+                <div class="question">
+                    <span class="checkbox"></span>
+                    <strong>נתונים סטטיסטיים</strong> שכדאי להדגיש? (בניינים, משפחות, וכו')
+                </div>
+            </div>
+
+            <div class="question-group">
+                <h3>טקסטים ותוכן</h3>
+                <div class="question">
+                    <span class="checkbox"></span>
+                    <strong>יש לכם תוכן קיים</strong> או טקסטים שכתובים?
+                </div>
+                <div class="question">
+                    <span class="checkbox"></span>
+                    <strong>מי יכתוב את התוכן?</strong>
+                    <ul style="margin-right: 30px; font-size: 14px; color: #6b7280;">
+                        <li>אתם כותבים ואני מעצב?</li>
+                        <li>אני כותב טיוטות ואתם עורכים?</li>
+                        <li>שיתוף פעולה?</li>
+                    </ul>
+                </div>
+                <div class="question">
+                    <span class="checkbox"></span>
+                    <strong>סלוגן או משפט תדמית?</strong> או שאני אציע אופציות?
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🎨 העדפות עיצוב</h2>
+
+            <div class="question-group">
+                <h3>סגנון חזוטי</h3>
+                <div class="question">
+                    <span class="checkbox"></span>
+                    <strong>אתרים שאתם אוהבים?</strong> (השראה לעיצוב) - יש לנו את ONYX כהתייחסות
+                </div>
+                <div class="question">
+                    <span class="checkbox"></span>
+                    <strong>אתרים שאתם שונאים?</strong> (מה להימנע ממנו)
+                </div>
+                <div class="question">
+                    <span class="checkbox"></span>
+                    <strong>העדפות צבע?</strong> חם, קר, נועז, עדין?
+                </div>
+            </div>
+
+            <div class="question-group">
+                <h3>תמונות וחומרים ויזואליים</h3>
+                <div class="question">
+                    <span class="checkbox"></span>
+                    <strong>יש לכם תמונות פרופסיונליות</strong> של בניינים, פרויקטים או הצוות?
+                </div>
+                <div class="question">
+                    <span class="checkbox"></span>
+                    <strong>תוכן וידאו</strong> - רוצים לכלול? (אופציונלי)
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🔧 טכני ופונקציונליות</h2>
+
+            <div class="question-group">
+                <h3>פונקציונליות</h3>
+                <div class="question">
+                    <span class="checkbox"></span>
+                    <strong>חשבון WhatsApp Business?</strong> יש לכם כזה מוגדר לעסק?
+                </div>
+                <div class="question">
+                    <span class="checkbox"></span>
+                    <strong>אחסון אימייל?</strong> Google Workspace, Microsoft 365, או משהו אחר?
+                </div>
+                <div class="question">
+                    <span class="checkbox"></span>
+                    <strong>CRM או ניהול לידים?</strong> איך תרצו לקבל/לנהל טפסים?
+                    <ul style="margin-right: 30px; font-size: 14px; color: #6b7280;">
+                        <li>התראות באימייל?</li>
+                        <li>אינטגרציה עם CRM (כמו HubSpot, Pipedrive)?</li>
+                        <li>Google Sheets?</li>
+                        <li>משהו אחר?</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="question-group">
+                <h3>אנליטיקס ומעקב</h3>
+                <div class="question">
+                    <span class="checkbox"></span>
+                    <strong>Google Analytics?</strong> יש לכם חשבון?
+                </div>
+                <div class="question">
+                    <span class="checkbox"></span>
+                    <strong>Facebook Pixel</strong> או מעקב שיווקי אחר?
+                </div>
+                <div class="question">
+                    <span class="checkbox"></span>
+                    <strong>אילו מדדים הכי חשובים?</strong> הגשות טפסים, שיחות טלפון, וכו'?
+                </div>
+            </div>
+
+            <div class="question-group">
+                <h3>אחרי השקה</h3>
+                <div class="question">
+                    <span class="checkbox"></span>
+                    <strong>מי ינהל עדכונים</strong> לאתר אחרי ההשקה?
+                </div>
+                <div class="question">
+                    <span class="checkbox"></span>
+                    <strong>כמה פעמים תעדכנו</strong> תוכן?
+                </div>
+                <div class="question">
+                    <span class="checkbox"></span>
+                    <strong>צריך הדרכה</strong> איך לעשות עדכונים בעצמכם?
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🎯 אסטרטגיה ומטרות</h2>
+
+            <div class="question-group">
+                <h3>קהל יעד</h3>
+                <div class="question">
+                    <span class="checkbox"></span>
+                    <strong>פרופיל הקהל העיקרי?</strong>
+                    <ul style="margin-right: 30px; font-size: 14px; color: #6b7280;">
+                        <li>טווח גילאים של דיירים טיפוסיים?</li>
+                        <li>שכונות/אזורים ספציפיים?</li>
+                        <li>מאפייני בניינים (גיל, גודל)?</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="question-group">
+                <h3>מדדי הצלחה</h3>
+                <div class="question">
+                    <span class="checkbox"></span>
+                    <strong>איך תמדדו הצלחה</strong> של האתר?
+                </div>
+                <div class="question">
+                    <span class="checkbox"></span>
+                    <strong>מה מספר טוב</strong> של הגשות טפסים לחודש?
+                </div>
+                <div class="question">
+                    <span class="checkbox"></span>
+                    <strong>מקורות לידים נוכחיים?</strong> איך אתם מקבלים לידים עכשיו?
+                </div>
+            </div>
+
+            <div class="question-group">
+                <h3>שיווק</h3>
+                <div class="question">
+                    <span class="checkbox"></span>
+                    <strong>קמפיינים שיווקיים</strong> מתוכננים סביב ההשקה?
+                </div>
+                <div class="question">
+                    <span class="checkbox"></span>
+                    <strong>נוכחות ברשתות חברתיות?</strong> Facebook, Instagram, LinkedIn?
+                </div>
+                <div class="question">
+                    <span class="checkbox"></span>
+                    <strong>שיווק באימייל?</strong> בנייה של רשימת תפוצה?
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📋 תוכן נדרש</h2>
+
+            <div class="question-group">
+                <p><strong>אתם יכולים לספק או שאני אכתוב טיוטה?</strong></p>
+                <div class="question">
+                    <span class="checkbox"></span>
+                    תיאור החברה (מי אנחנו)
+                </div>
+                <div class="question">
+                    <span class="checkbox"></span>
+                    הצעת ערך/סלוגן
+                </div>
+                <div class="question">
+                    <span class="checkbox"></span>
+                    הסבר על התהליך (4 השלבים)
+                </div>
+                <div class="question">
+                    <span class="checkbox"></span>
+                    תוכן חינוכי על תמ"א/התחדשות עירונית
+                </div>
+                <div class="question">
+                    <span class="checkbox"></span>
+                    יתרונות של עבודה עם Urban Age
+                </div>
+                <div class="question">
+                    <span class="checkbox"></span>
+                    תוכן שאלות נפוצות (FAQ)
+                </div>
+                <div class="question">
+                    <span class="checkbox"></span>
+                    טקסט לעמוד יצירת קשר
+                </div>
+            </div>
+
+            <div class="question-group priority-medium">
+                <h3>משפטי</h3>
+                <div class="question">
+                    <span class="checkbox"></span>
+                    <strong>מדיניות פרטיות</strong> - צריך או יש לכם?
+                </div>
+                <div class="question">
+                    <span class="checkbox"></span>
+                    <strong>תנאי שימוש</strong> - צריך או יש לכם?
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🚀 רעיונות לעתיד (לא דחוף)</h2>
+
+            <div class="question-group">
+                <p>אלו לא דחופים, אבל טוב לדעת לשלב 2 אפשרי:</p>
+                <div class="question">
+                    <span class="checkbox"></span>
+                    <strong>בלוג/חדשות</strong> ל-SEO ועדכונים?
+                </div>
+                <div class="question">
+                    <span class="checkbox"></span>
+                    <strong>כלי בדיקת זכאות</strong> לבניין (אינטראקטיבי)?
+                </div>
+                <div class="question">
+                    <span class="checkbox"></span>
+                    <strong>תמיכה רב-לשונית?</strong> (אנגלית, רוסית)
+                </div>
+                <div class="question">
+                    <span class="checkbox"></span>
+                    <strong>פורטל לקוחות</strong> ללקוחות קיימים למעקב אחר התקדמות?
+                </div>
+                <div class="question">
+                    <span class="checkbox"></span>
+                    <strong>מדור פרויקטים/תיק עבודות?</strong>
+                </div>
+                <div class="question">
+                    <span class="checkbox"></span>
+                    <strong>הרשמה לניוזלטר</strong> לשיווק?
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>💬 הבהרות מהפגישה</h2>
+
+            <div class="question-group">
+                <p><strong>רק כדי לוודא שהבנתי נכון:</strong></p>
+
+                <h3>מודל עסקי</h3>
+                <p style="margin-right: 20px; color: #4b5563;">
+                    דיירים מבקרים באתר ← מגישים פרטי בניין ← Urban Age בודקת כדאיות לתמ"א/התחדשות ←
+                    Urban Age מוצאת קבלן שותף ← חברת הקבלנות מבצעת את הפרויקט
+                </p>
+                <div class="question">
+                    <span class="checkbox"></span>
+                    <strong>זה נכון?</strong>
+                </div>
+
+                <h3>קהלי יעד</h3>
+                <p style="margin-right: 20px; color: #4b5563;">
+                    1. <strong>עיקרי:</strong> דיירי בניינים (ליצירת לידים)<br>
+                    2. <strong>משני:</strong> חברות קבלנות גדולות (לשותפויות)
+                </p>
+                <div class="question">
+                    <span class="checkbox"></span>
+                    <strong>זה הסדר עדיפויות הנכון?</strong>
+                </div>
+
+                <h3>כיוון עיצובי</h3>
+                <p style="margin-right: 20px; color: #4b5563;">
+                    איזון בין ידידותי ופרופסיונלי • חם ונגיש יותר מ-ONYX Group •
+                    פשוט, ברור, לא עמוס
+                </p>
+                <div class="question">
+                    <span class="checkbox"></span>
+                    <strong>זה מתאים לחזון שלכם?</strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📞 הדרך הטובה ביותר לקבל תשובות</h2>
+
+            <div class="question-group">
+                <div class="question">
+                    <span class="checkbox"></span>
+                    <strong>איך כדאי לי לשאול שאלות המשך?</strong>
+                    <ul style="margin-right: 30px; font-size: 14px; color: #6b7280;">
+                        <li>WhatsApp?</li>
+                        <li>אימייל?</li>
+                        <li>שיחות קצרות?</li>
+                        <li>פשוט טקסט מתי שנוח?</li>
+                    </ul>
+                </div>
+                <div class="question">
+                    <span class="checkbox"></span>
+                    <strong>למי כדאי לי להפנות שאלות?</strong>
+                    <ul style="margin-right: 30px; font-size: 14px; color: #6b7280;">
+                        <li>לשלושתכם?</li>
+                        <li>בעיקר לטל?</li>
+                        <li>תלוי בנושא?</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p><strong>תודה רבה! 🙏</strong></p>
+            <p>
+                אין צורך לענות על הכל בבת אחת - פשוט עברו על השאלות ותענו על מה שנוח לכם עכשיו,
+                והשאר נשלים בהמשך.
+            </p>
+            <p>
+                ככל שיהיו לי יותר תשובות, כך נוכל להתקדם מהר יותר ולבנות משהו שבאמת מתאים לכם.
+            </p>
+            <p style="margin-top: 20px;">
+                <strong>בהצלחה!</strong><br>
+                שיילי
+            </p>
+        </div>
+    </div>
+</body>
+</html>

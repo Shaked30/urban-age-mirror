@@ -8,15 +8,11 @@
 ## 🚨 Critical - Need ASAP
 
 ### Access & Technical
-- [ ] **Base44 site login?** Username and password for https://urban-age.base44.app
 - [ ] **GoDaddy access?** Login credentials or add me as authorized user
-- [ ] **Domain name?** What's the final domain URL? (urban-age.co.il or something else?)
-- [ ] **Launch deadline?** Any hard date or just "as soon as possible"?
 
 ### Content
 - [ ] **Team photos?** Do you have photos of Tal, Sagi, and Gilad for the About section?
 - [ ] **Logo?** Vector files (AI, EPS, SVG) if you have them?
-- [ ] **Brand colors?** Any specific colors you want to use, or should I suggest options?
 
 ---
 
@@ -54,15 +50,12 @@
 ## 🎨 Design Preferences
 
 ### Visual Style
-- [ ] **Any websites you love?** (design inspiration)
+- [ ] **Any websites you love?** (design inspiration), we have ONYX reference 
 - [ ] **Any websites you hate?** (what to avoid)
 - [ ] **Color preferences?** Warm, cool, bold, subtle?
-- [ ] **Should we reference ONYX Group's quality** but make it warmer/friendlier?
 
 ### Photos & Imagery
 - [ ] **Do you have professional photos** of buildings, projects, or team?
-- [ ] **Budget for stock photography** if needed?
-- [ ] **Need a photographer** for team photos?
 - [ ] **Video content** - do you want to include any? (optional)
 
 ---
@@ -79,7 +72,7 @@
   - Something else?
 
 ### Analytics & Tracking
-- [ ] **Google Analytics?** Do you have an account or should I set one up?
+- [ ] **Google Analytics?** Do you have an account?
 - [ ] **Facebook Pixel** or other marketing tracking?
 - [ ] **What metrics matter most?** Form submissions, phone calls, etc.?
 
@@ -183,11 +176,9 @@ Just to confirm I understood correctly:
 ## ✅ Action Items
 
 **What I need from you first:**
-1. Base44 site access
-2. GoDaddy access
-3. Domain name
-4. Team photos (when you have them)
-5. Logo files (if you have)
+1. GoDaddy access
+2. Team photos (when you have them)
+3. Logo files (if you have)
 
 **Then we can tackle:**
 6. Design direction feedback

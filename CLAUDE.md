@@ -102,7 +102,7 @@ Residents should feel:
 ### Current Situation
 - **Previous Developer:** Base44
 - **Current Site:** https://urban-age.base44.app (need access)
-- **Domain:** GoDaddy (need access)
+- **Domain:** urban-age.com (managed via GoDaddy, need access)
 - **Status:** Incomplete, need to assess and complete
 
 ### Approach
@@ -125,6 +125,7 @@ Residents should feel:
 - `QUESTIONS_FOR_URBAN_AGE.md` - Questions for the team
 - `ONYX_GROUP_ANALYSIS.md` - Reference site (quality benchmark, make warmer)
 - `BASE44_TAKEOVER_TECHNICAL.md` - Technical assessment guide
+- `base44_reference/base44_site_content.md` - Base44's existing content (reference only)
 
 ### Archive
 - `archive/` - Pre-meeting prep docs (not needed)
@@ -139,11 +140,10 @@ Residents should feel:
 - [x] Brand direction defined
 - [x] Documentation created
 - [x] Repository organized
+- [x] Base44 site content reference obtained
 
 ### Blocked - Waiting On
-- [ ] Base44 site access (username/password)
-- [ ] GoDaddy access
-- [ ] Domain name confirmation
+- [ ] GoDaddy access (for domain management)
 - [ ] Team photos (Tal, Sagi, Gilad)
 - [ ] Logo files (if available)
 
@@ -230,7 +230,11 @@ Homepage should prioritize residents, but overall site credibility serves both.
 - BUT make Urban Age warmer and more approachable
 - Use as inspiration for quality, not tone
 
-**Current Site:** https://urban-age.base44.app (need access)
+**Base44 Site:** https://urban-age.base44.app
+- Content extracted and saved in `docs/base44_reference/`
+- NOTE: Tone is TOO corporate/formal - need to make MUCH warmer
+- Use for factual reference only (projects, services)
+- Rewrite all copy with resident-first, friendly approach
 
 ---
 
@@ -240,4 +244,22 @@ Homepage should prioritize residents, but overall site credibility serves both.
 
 ## 📝 Notes for Future Sessions
 
-_Add notes here about decisions made, changes, or important context discovered during development..._
+### November 23, 2025 - Base44 Content Analysis
+**Base44 site content obtained** (PDFs extracted to text, saved in `docs/base44_reference/`)
+
+**Key Findings:**
+- **Tone:** Much too formal and corporate - exactly what we DON'T want
+- **Audience focus:** Heavy emphasis on construction partnerships (secondary audience)
+- **Language:** Technical real estate jargon - needs simplification for residents
+- **Content to use:**
+  - ✅ Project list: Basti 31-33 Tel Aviv, Carmel 10-4 Petach Tikva, Yehuda HaNer 8-10 Tel Aviv, HaBanim 17 Holon
+  - ✅ Company positioning as urban renewal specialists
+  - ✅ Process concept: "from idea to move-in"
+  - ✅ Values: Partnership, transparency, personal accompaniment
+- **Content to AVOID:**
+  - ❌ Corporate, stiff tone
+  - ❌ Heavy focus on construction company partnerships
+  - ❌ Technical terminology (התחדשות בניינית, פינוי־בינוי without explanation)
+  - ❌ Lack of warmth and personality
+
+**Action:** Use Base44 content as factual reference but completely rewrite with friendly, resident-first tone that prioritizes simplicity and warmth.
