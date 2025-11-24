@@ -370,6 +370,63 @@
         </div>
     </footer>
 
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-banner" id="cookieBanner">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                <h3>🍪 עוגיות (Cookies)</h3>
+                <p>אנו משתמשים בעוגיות כדי לשפר את חווית הגלישה שלכם. באפשרותכם לבחור אילו עוגיות להפעיל.</p>
+            </div>
+            <div class="cookie-buttons">
+                <button onclick="acceptEssential()" class="cookie-btn cookie-btn-secondary">רק הכרחיות</button>
+                <button onclick="acceptAll()" class="cookie-btn cookie-btn-primary">אישור הכל</button>
+                <button onclick="toggleCookieSettings()" class="cookie-btn cookie-btn-link">הגדרות</button>
+            </div>
+        </div>
+
+        <!-- Cookie Settings Panel -->
+        <div class="cookie-settings" id="cookieSettings" style="display: none;">
+            <h4>הגדרות עוגיות</h4>
+
+            <div class="cookie-option">
+                <div class="cookie-option-header">
+                    <input type="checkbox" id="essentialCookies" checked disabled>
+                    <label for="essentialCookies">
+                        <strong>עוגיות הכרחיות</strong>
+                        <span class="cookie-required">(נדרש)</span>
+                    </label>
+                </div>
+                <p class="cookie-description">עוגיות אלו נחוצות לתפעול האתר ואינן ניתנות לכיבוי.</p>
+            </div>
+
+            <div class="cookie-option">
+                <div class="cookie-option-header">
+                    <input type="checkbox" id="analyticsCookies">
+                    <label for="analyticsCookies">
+                        <strong>עוגיות סטטיסטיות</strong>
+                    </label>
+                </div>
+                <p class="cookie-description">עוגיות אלו עוזרות לנו להבין כיצד מבקרים משתמשים באתר (Google Analytics).</p>
+            </div>
+
+            <div class="cookie-option">
+                <div class="cookie-option-header">
+                    <input type="checkbox" id="marketingCookies">
+                    <label for="marketingCookies">
+                        <strong>עוגיות שיווקיות</strong>
+                    </label>
+                </div>
+                <p class="cookie-description">עוגיות אלו משמשות להצגת פרסומות רלוונטיות יותר.</p>
+            </div>
+
+            <div class="cookie-settings-buttons">
+                <button onclick="savePreferences()" class="cookie-btn cookie-btn-primary">שמור העדפות</button>
+                <a href="privacy.html" target="_blank" class="cookie-btn cookie-btn-link">מדיניות פרטיות</a>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
+    <script src="cookie-consent.js"></script>
 </body>
 </html>
