@@ -17,14 +17,17 @@ A modern, conversion-focused website for Urban Age - making urban renewal simple
 ## 📁 Project Structure
 
 ```
-/dayan-nadlan
-├── index.html              # Main website file
-├── style.css              # All styles (warm/friendly premium design)
-├── script.js              # Scroll animations, form handling, navigation
-├── DEPLOYMENT_GUIDE.md    # Complete deployment instructions
-├── TASKS.md              # Project task tracker
-├── CLAUDE.md             # Project context and requirements
-└── docs/                 # Reference documentation
+/urban-age
+├── index.html                           # Main website file
+├── style.css                           # All styles (warm/friendly premium design)
+├── script.js                           # Scroll animations, form handling, navigation
+├── DEPLOYMENT_GUIDE.md                 # Complete deployment instructions
+├── TASKS.md                            # Project task tracker
+├── CLAUDE.md                           # Project context and requirements
+├── LEGAL_COMPLIANCE.md                 # Technical legal compliance guide
+├── COMPLIANCE_SUMMARY_FOR_TAL.md       # Business-focused compliance summary
+├── COMPLIANCE_IMPLEMENTATION_STATUS.md # What we've done vs. what remains
+└── docs/                               # Reference documentation
 ```
 
 ---
@@ -48,8 +51,18 @@ A modern, conversion-focused website for Urban Age - making urban renewal simple
 ### Lead Capture Form
 - **Netlify Forms Integration**: Secure, spam-protected form handling
 - **Fields**: Name, Phone, Email, Building Address, Optional message
+- **Legal Compliance**: Required consent checkboxes (Privacy, Terms, Data Sharing)
+- **Disclaimers**: Protects from liability (not professional advice)
 - **No backend needed**: Netlify handles all form submissions
 - **Email notifications**: Get notified of new leads instantly
+
+### Legal Compliance (Israeli Law)
+- **Privacy Law (Amendment 13)**: Contact form consents, disclaimers, templates ready
+- **Accessibility (IS 5568)**: WCAG 2.1 AA structure, semantic HTML, keyboard navigation
+- **Consumer Protection**: Company info in footer, Terms of Service, disclaimers
+- **TAMA Liability Protection**: Careful language, no guarantees, professional advice recommendations
+
+**See: [COMPLIANCE_SUMMARY_FOR_TAL.md](COMPLIANCE_SUMMARY_FOR_TAL.md) for complete details**
 
 ---
 
@@ -116,12 +129,21 @@ Background: #F8F9FA
 
 ## 📋 Next Steps
 
-### Immediate (Before Launch)
+### Immediate (Before Launch) 🔴
+- [ ] **Get company details**: Registration number (ח.פ), physical address
+- [ ] **Create legal pages**: Privacy Policy, Terms of Service, Accessibility Statement
+- [ ] **Implement cookie banner**: Opt-in consent for analytics/marketing
 - [ ] Get team photos from Tal, Sagi, Gilad
 - [ ] Replace placeholder contact info with real phone/email
 - [ ] Get company logo (if available)
 - [ ] Review and adjust all copy/messaging
-- [ ] Test form submissions
+- [ ] Test form submissions with consent checkboxes
+
+### Highly Recommended 🟡
+- [ ] **Get attorney review**: Israeli lawyer to review legal pages
+- [ ] **Get accessibility audit**: Professional WCAG 2.1 AA testing
+- [ ] **Get insurance**: Professional liability + cyber liability
+- [ ] **Train team**: Data handling and communication guidelines
 
 ### Phase 2 (Post-Launch)
 - [ ] Add Hebrew language content (currently structure is RTL-ready)
@@ -210,8 +232,11 @@ Edit [style.css](style.css) CSS variables at the top:
 
 ---
 
-## 📞 Support
+## 📞 Support & Documentation
 
+**For legal compliance**: See [COMPLIANCE_SUMMARY_FOR_TAL.md](COMPLIANCE_SUMMARY_FOR_TAL.md) (business guide)
+**For technical compliance**: See [LEGAL_COMPLIANCE.md](LEGAL_COMPLIANCE.md) (detailed requirements)
+**For compliance status**: See [COMPLIANCE_IMPLEMENTATION_STATUS.md](COMPLIANCE_IMPLEMENTATION_STATUS.md) (what's done)
 **For deployment issues**: See [DEPLOYMENT_GUIDE.md](DEPLOYMENT_GUIDE.md)
 **For design questions**: Review [CLAUDE.md](CLAUDE.md) project context
 **For task tracking**: See [TASKS.md](TASKS.md)

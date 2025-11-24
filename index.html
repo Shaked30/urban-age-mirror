@@ -278,6 +278,42 @@
                             <textarea id="message" name="message" rows="4" placeholder="יש משהו שתרצו שנדע?"></textarea>
                         </div>
 
+                        <!-- Legal Disclaimer -->
+                        <div class="form-disclaimer">
+                            <p><strong>הערה חשובה:</strong> Urban Age מספקת שירות הערכה ראשוני בלבד. אנו ממליצים להיוועץ עם עורכי דין ויועצים פיננסיים מורשים לפני קבלת החלטות. אין זו ייעוץ משפטי, פיננסי או נדל"ני.</p>
+                        </div>
+
+                        <!-- Required Consents -->
+                        <div class="form-consents">
+                            <div class="consent-item">
+                                <input type="checkbox" id="privacy-consent" name="privacy-consent" required>
+                                <label for="privacy-consent">
+                                    קראתי ואני מסכים/ה ל<a href="privacy.html" target="_blank">מדיניות הפרטיות</a> *
+                                </label>
+                            </div>
+
+                            <div class="consent-item">
+                                <input type="checkbox" id="terms-consent" name="terms-consent" required>
+                                <label for="terms-consent">
+                                    אני מסכים/ה ל<a href="terms.html" target="_blank">תנאי השימוש</a> *
+                                </label>
+                            </div>
+
+                            <div class="consent-item">
+                                <input type="checkbox" id="data-sharing-consent" name="data-sharing-consent" required>
+                                <label for="data-sharing-consent">
+                                    אני מאשר/ת ל-Urban Age לשתף את הפרטים שלי עם חברות בניה לצורך הערכת כשירות הבניין שלי לפרויקטים של התחדשות עירונית *
+                                </label>
+                            </div>
+
+                            <div class="consent-item">
+                                <input type="checkbox" id="marketing-consent" name="marketing-consent">
+                                <label for="marketing-consent">
+                                    ברצוני לקבל עדכונים ומידע שיווקי מ-Urban Age (אופציונלי)
+                                </label>
+                            </div>
+                        </div>
+
                         <button type="submit" class="submit-button">שלח פנייה</button>
 
                         <!-- Success message (hidden by default) -->
@@ -300,16 +336,36 @@
                 </div>
 
                 <div class="footer-links">
-                    <a href="#hero">בית</a>
-                    <a href="#process">איך זה עובד</a>
-                    <a href="#about">אודות</a>
-                    <a href="#education">מה זה תמ״א?</a>
-                    <a href="#contact">צור קשר</a>
+                    <div class="footer-nav">
+                        <h4>ניווט</h4>
+                        <a href="#hero">בית</a>
+                        <a href="#process">איך זה עובד</a>
+                        <a href="#about">אודות</a>
+                        <a href="#education">מה זה תמ״א?</a>
+                        <a href="#contact">צור קשר</a>
+                    </div>
+
+                    <div class="footer-legal">
+                        <h4>מידע משפטי</h4>
+                        <a href="privacy.html">מדיניות פרטיות</a>
+                        <a href="terms.html">תנאי שימוש</a>
+                        <a href="accessibility.html">הצהרת נגישות</a>
+                    </div>
+
+                    <div class="footer-company">
+                        <h4>פרטי החברה</h4>
+                        <p>Urban Age בע״מ</p>
+                        <p>ח.פ: [COMPANY_ID]</p>
+                        <p>כתובת: [ADDRESS]</p>
+                        <p>טלפון: <a href="tel:+972501234567">050-123-4567</a></p>
+                        <p>אימייל: <a href="mailto:hello@urban-age.com">hello@urban-age.com</a></p>
+                    </div>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2025 Urban Age. כל הזכויות שמורות.</p>
+                <p>&copy; 2025 Urban Age בע״מ. כל הזכויות שמורות.</p>
+                <p class="footer-disclaimer">המידע באתר זה הוא למטרות מידע כללי בלבד ואינו מהווה ייעוץ משפטי, פיננסי או נדל"ני. אנו ממליצים להתייעץ עם אנשי מקצוע מורשים.</p>
             </div>
         </div>
     </footer>

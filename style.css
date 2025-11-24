@@ -685,6 +685,73 @@ body {
     font-weight: var(--font-weight-light);
 }
 
+/* Form Legal Elements */
+
+.form-disclaimer {
+    margin: 30px 0;
+    padding: 20px;
+    background: var(--bg-light);
+    border: 1px solid var(--border-color);
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: var(--text-medium);
+}
+
+.form-disclaimer strong {
+    color: var(--text-dark);
+    font-weight: var(--font-weight-medium);
+}
+
+.form-consents {
+    margin: 30px 0;
+    padding: 25px;
+    background: var(--bg-light);
+    border: 1px solid var(--border-color);
+}
+
+.consent-item {
+    margin-bottom: 18px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.consent-item:last-child {
+    margin-bottom: 0;
+    padding-top: 18px;
+    border-top: 1px solid var(--border-color);
+}
+
+.consent-item input[type="checkbox"] {
+    margin-top: 4px;
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    cursor: pointer;
+    accent-color: var(--primary-dark);
+}
+
+.consent-item label {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--text-medium);
+    cursor: pointer;
+    margin: 0;
+    text-transform: none;
+    letter-spacing: normal;
+    font-weight: var(--font-weight-regular);
+}
+
+.consent-item label a {
+    color: var(--primary-dark);
+    text-decoration: underline;
+    transition: var(--transition-smooth);
+}
+
+.consent-item label a:hover {
+    color: var(--accent);
+}
+
 /* ========================================
    Footer
    ======================================== */
@@ -721,7 +788,26 @@ body {
 
 .footer-links {
     display: flex;
-    gap: 50px;
+    gap: 60px;
+}
+
+.footer-nav,
+.footer-legal,
+.footer-company {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-nav h4,
+.footer-legal h4,
+.footer-company h4 {
+    font-size: 0.75rem;
+    font-weight: var(--font-weight-medium);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-dark);
+    margin-bottom: 8px;
 }
 
 .footer-links a {
@@ -729,12 +815,27 @@ body {
     text-decoration: none;
     transition: var(--transition-smooth);
     font-size: 0.85rem;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
     font-weight: var(--font-weight-light);
 }
 
 .footer-links a:hover {
+    color: var(--text-dark);
+}
+
+.footer-company p {
+    font-size: 0.85rem;
+    color: var(--text-medium);
+    margin: 0;
+    line-height: 1.8;
+}
+
+.footer-company a {
+    color: var(--text-medium);
+    text-decoration: none;
+    transition: var(--transition-smooth);
+}
+
+.footer-company a:hover {
     color: var(--text-dark);
 }
 
@@ -746,6 +847,18 @@ body {
     font-size: 0.75rem;
     letter-spacing: 1px;
     font-weight: var(--font-weight-light);
+}
+
+.footer-bottom p {
+    margin: 10px 0;
+}
+
+.footer-disclaimer {
+    font-size: 0.7rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 15px auto 0;
+    opacity: 0.8;
 }
 
 /* ========================================
