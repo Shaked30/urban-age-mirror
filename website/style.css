@@ -75,7 +75,7 @@ body {
     left: 0;
     width: 100%;
     height: 100vh;
-    background: var(--black);
+    background: var(--white);
     z-index: 10001;
     display: flex;
     align-items: center;
@@ -99,6 +99,16 @@ body {
     width: auto;
     height: auto;
     object-fit: contain;
+    animation: videoZoomOut 4s ease-out forwards;
+}
+
+@keyframes videoZoomOut {
+    0% {
+        transform: scale(2);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 /* ========================================
@@ -170,75 +180,104 @@ body {
 }
 
 /* ========================================
-   Hero Section with Zoom Animation
+   Hero Section with Sliding Panel
    ======================================== */
 
 .hero {
     height: 100vh;
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     overflow: hidden;
     background: var(--white);
 }
 
-.hero-image-wrapper {
+/* Video Container */
+.hero-videos-container {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.hero-video-wrapper {
+    position: absolute;
+    width: 50%;
     height: 100%;
     overflow: hidden;
 }
 
-.hero-image {
-    position: absolute;
-    top: 0;
+.hero-video-left {
     left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('assets/images/hero-building.jpg');
-    background-size: cover;
-    background-position: center;
-    animation: heroZoom 15s ease-in-out infinite alternate;
 }
 
-@keyframes heroZoom {
+.hero-video-right {
+    right: 0;
+}
+
+.hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Sliding White Panel */
+.hero-sliding-panel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    box-shadow: -20px 0 60px rgba(0, 0, 0, 0.15);
+    animation: slidePanel 14s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+}
+
+@keyframes slidePanel {
     0% {
-        transform: scale(1);
+        transform: translateX(0);
+    }
+    35.7% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-100%);
+    }
+    85.7% {
+        transform: translateX(-100%);
     }
     100% {
-        transform: scale(1.1);
+        transform: translateX(0);
     }
 }
 
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.7);
-    z-index: 1;
+/* Panel Content */
+.hero-panel-content {
+    text-align: center;
+    max-width: 600px;
+    padding: 60px;
+    opacity: 0;
+    animation: fadeInContent 1s ease 0.5s forwards;
 }
 
-.hero-content {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    max-width: 900px;
-    padding: 0 40px;
+@keyframes fadeInContent {
+    to {
+        opacity: 1;
+    }
 }
 
 .hero-title {
-    font-size: 72px;
+    font-size: 56px;
     font-weight: var(--font-weight-light);
     color: var(--black);
     margin-bottom: 30px;
     letter-spacing: -2px;
-    line-height: 1.1;
-    animation: fadeInUp 1s ease;
+    line-height: 1.2;
 }
 
 .hero-subtitle {
@@ -247,7 +286,7 @@ body {
     color: var(--gray-600);
     margin-bottom: 50px;
     letter-spacing: 0;
-    animation: fadeInUp 1s ease 0.2s backwards;
+    line-height: 1.6;
 }
 
 .cta-button {
@@ -261,12 +300,13 @@ body {
     letter-spacing: 2px;
     transition: var(--transition);
     border: 1px solid var(--black);
-    animation: fadeInUp 1s ease 0.4s backwards;
 }
 
 .cta-button:hover {
     background: var(--white);
     color: var(--black);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 /* ========================================
@@ -904,11 +944,19 @@ body {
     }
 
     .hero-title {
-        font-size: 48px;
+        font-size: 42px;
     }
 
     .hero-subtitle {
         font-size: 18px;
+    }
+
+    .hero-panel-content {
+        padding: 40px;
+    }
+
+    .hero-sliding-panel {
+        box-shadow: -10px 0 40px rgba(0, 0, 0, 0.1);
     }
 
     .section-title {
@@ -971,16 +1019,67 @@ body {
     }
 
     .hero-title {
-        font-size: 36px;
+        font-size: 32px;
     }
 
     .hero-subtitle {
         font-size: 16px;
+        margin-bottom: 35px;
+    }
+
+    .hero-panel-content {
+        padding: 30px 20px;
+        max-width: 100%;
     }
 
     .cta-button {
         padding: 15px 40px;
         font-size: 13px;
+    }
+
+    /* Stack videos vertically on mobile */
+    .hero-video-wrapper {
+        width: 100%;
+        height: 50%;
+    }
+
+    .hero-video-left {
+        top: 0;
+        left: 0;
+    }
+
+    .hero-video-right {
+        top: 50%;
+        right: 0;
+    }
+
+    /* Panel takes full width and slides vertically on mobile */
+    .hero-sliding-panel {
+        width: 100%;
+        height: 50%;
+        top: 0;
+        right: auto;
+        left: 0;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        animation: slidePanelMobile 14s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+    }
+
+    @keyframes slidePanelMobile {
+        0% {
+            transform: translateY(0);
+        }
+        35.7% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(100%);
+        }
+        85.7% {
+            transform: translateY(100%);
+        }
+        100% {
+            transform: translateY(0);
+        }
     }
 
     .section-title {

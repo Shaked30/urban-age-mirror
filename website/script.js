@@ -21,6 +21,9 @@ if (videoIntro && introVideo) {
             videoIntro.classList.add('hidden');
             document.body.style.overflow = '';
             console.log('Video intro hidden');
+
+            // Start hero videos after intro is hidden
+            playHeroVideos();
         }, 1500); // Match the CSS transition duration
     };
 
@@ -57,6 +60,35 @@ if (videoIntro && introVideo) {
         console.log('User clicked to skip');
         fadeOutVideo();
     });
+} else {
+    // If no intro video, start hero videos immediately
+    playHeroVideos();
+}
+
+// Hero Videos Handler
+function playHeroVideos() {
+    const heroVideo1 = document.getElementById('heroVideo1');
+    const heroVideo2 = document.getElementById('heroVideo2');
+
+    if (heroVideo1) {
+        heroVideo1.play().catch(e => {
+            console.log('Hero video 1 autoplay failed, trying to play on user interaction:', e);
+            // Retry on first user interaction
+            document.addEventListener('click', () => {
+                heroVideo1.play().catch(err => console.log('Still failed:', err));
+            }, { once: true });
+        });
+    }
+
+    if (heroVideo2) {
+        heroVideo2.play().catch(e => {
+            console.log('Hero video 2 autoplay failed, trying to play on user interaction:', e);
+            // Retry on first user interaction
+            document.addEventListener('click', () => {
+                heroVideo2.play().catch(err => console.log('Still failed:', err));
+            }, { once: true });
+        });
+    }
 }
 
 // Mobile Navigation Toggle

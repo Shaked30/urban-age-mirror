@@ -41,16 +41,31 @@
         </div>
     </nav>
 
-    <!-- Hero Section with Zoom Animation -->
+    <!-- Hero Section with Sliding Panel -->
     <section id="hero" class="hero">
-        <div class="hero-image-wrapper">
-            <div class="hero-image"></div>
+        <div class="hero-videos-container">
+            <!-- Left Video -->
+            <div class="hero-video-wrapper hero-video-left">
+                <video autoplay muted loop playsinline class="hero-video" id="heroVideo1">
+                    <source src="../AI_Generated_videos/4.MP4" type="video/mp4">
+                </video>
+            </div>
+
+            <!-- Right Video -->
+            <div class="hero-video-wrapper hero-video-right">
+                <video autoplay muted loop playsinline class="hero-video" id="heroVideo2">
+                    <source src="../AI_Generated_videos/2.MP4" type="video/mp4">
+                </video>
+            </div>
         </div>
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1 class="hero-title">יוצרים מרחבי חיים מתקדמים</h1>
-            <p class="hero-subtitle">עם נגיעה אישית שמלווה אתכם מהרעיון ועד המפתח</p>
-            <a href="#contact" class="cta-button">בואו נדבר</a>
+
+        <!-- Sliding White Panel -->
+        <div class="hero-sliding-panel">
+            <div class="hero-panel-content">
+                <h1 class="hero-title">יוצרים מרחבי חיים מתקדמים</h1>
+                <p class="hero-subtitle">עם נגיעה אישית שמלווה אתכם מהרעיון ועד המפתח</p>
+                <a href="#contact" class="cta-button">בואו נדבר</a>
+            </div>
         </div>
     </section>
 
