@@ -44,7 +44,7 @@ if (videoIntro && introVideo) {
 
         // Hide tap to start overlay
         if (tapToStartOverlay) {
-            tapToStartOverlay.classList.add('hidden');
+            tapToStartOverlay.style.display = 'none';
         }
 
         // Try to play the video
@@ -66,14 +66,17 @@ if (videoIntro && introVideo) {
     // Mobile: Show tap-to-start button
     if (isMobile && tapToStartOverlay && tapToStartButton) {
         console.log('Mobile detected - showing tap to start button');
-        tapToStartOverlay.classList.remove('hidden');
+        tapToStartOverlay.style.display = 'flex';
 
         tapToStartButton.addEventListener('click', (e) => {
             e.stopPropagation();
+            tapToStartOverlay.style.display = 'none';
             startVideo();
         });
     } else {
         // Desktop: Auto-start (existing behavior)
+        console.log('Desktop detected - auto-starting video');
+        tapToStartOverlay.style.display = 'none';
         startVideo();
     }
 
