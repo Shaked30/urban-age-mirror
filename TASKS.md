@@ -7,6 +7,47 @@
 
 ---
 
+## 🚨 CRITICAL BUGS - FIX NOW (Dec 6, 2025)
+
+### Priority 1: BLANK PAGE ON iPHONE SAFARI
+**Status:** 🔴 BROKEN - Site completely broken on iPhone Safari
+**Impact:** High - Many users will be on iPhone
+**Tasks:**
+- [ ] Reproduce issue on iPhone Safari
+- [ ] Check browser console for errors
+- [ ] Identify root cause (likely video intro or JavaScript error)
+- [ ] Implement fix
+- [ ] Test on actual iPhone device
+- [ ] Verify all iOS browsers (Safari, Chrome iOS)
+
+### Priority 2: VIDEO INTRO NOT WORKING CROSS-BROWSER
+**Status:** 🟡 PARTIAL - Only works on Chrome Desktop
+**Impact:** Medium - Users missing intro experience
+**Current State:**
+- ✅ Works: Chrome Desktop
+- ❌ Broken: Safari (all platforms)
+- ❌ Broken: Firefox
+- ❌ Broken: Mobile browsers (all)
+**Tasks:**
+- [ ] Test video format compatibility (WebM vs MP4)
+- [ ] Add fallback video formats
+- [ ] Ensure autoplay works with muted attribute
+- [ ] Test iOS video playback restrictions
+- [ ] Add skip/play button for mobile
+- [ ] Verify across all major browsers
+
+### Priority 3: LOGO NOT SHOWING IN WHATSAPP LINK PREVIEW
+**Status:** 🟡 MISSING - Social media preview incomplete
+**Impact:** Low - Aesthetic issue, doesn't break functionality
+**Tasks:**
+- [ ] Verify Open Graph image meta tag is correct
+- [ ] Check logo file path and accessibility
+- [ ] Test image dimensions (recommended: 1200x630px)
+- [ ] Clear WhatsApp cache and retest
+- [ ] Verify on other platforms (Facebook, LinkedIn, Twitter)
+
+---
+
 ## 🚨 NEXT IMMEDIATE ACTION
 
 **📧 Send Email to Urban Age Team** - [email-drafts/EMAIL_TO_TEAM.md](email-drafts/EMAIL_TO_TEAM.md)
@@ -29,6 +70,28 @@
 7. שירותים טכניים נוספים (Other services if any)
 
 **After Response:** 1 day of work → Launch! 🚀
+
+---
+
+## 🔐 SECURITY TASKS
+
+### ⚠️ IMPORTANT - Rotate Exposed Google Cloud Service Account Key
+
+**Priority:** High (but not blocking deployment)
+
+**Issue:** Google Cloud Service Account credentials were accidentally committed to git history in commit `0a3ca2e` ([GODADDY_DNS_SETUP.md:171](GODADDY_DNS_SETUP.md#L171)). While removed from current files, they remain in git history.
+
+**Action Required:**
+1. [ ] Go to [Google Cloud Console](https://console.cloud.google.com) → IAM & Admin → Service Accounts
+2. [ ] Find service account: `urban-age-form-handler@urban-age-website.iam.gserviceaccount.com`
+3. [ ] Delete the exposed key (ID: `b624f2d5f82088adca8d6237cd138aa1f0ca47a3`)
+4. [ ] Generate a new key
+5. [ ] Update `GOOGLE_SHEETS_CREDENTIALS` in Netlify environment variables
+6. [ ] Test form submission to verify new key works
+
+**Timeline:** Complete within 1-2 weeks (credentials currently stored in private repos only)
+
+**Status:** Credentials removed from documentation files ✅, Key rotation pending ⏳
 
 ---
 
