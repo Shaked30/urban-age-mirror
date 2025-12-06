@@ -165,11 +165,15 @@ false
 
 ### Variable 6: GOOGLE_SHEETS_CREDENTIALS
 
-**Value:** Copy the entire contents of `google-credentials.json` (single line):
+**Value:** Copy the entire contents of `google-credentials.json` (single line).
+
+This file contains your Google Cloud Service Account credentials. It should look like this (DO NOT commit actual credentials to git):
 
 ```json
-{"type":"service_account","project_id":"urban-age-website","private_key_id":"b624f2d5f82088adca8d6237cd138aa1f0ca47a3","private_key":"-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDiGtW34lKSglV/\nlyWPlq5ATIaGiUMxG4AMANxZMBJIVuAMxKq5kA1yxGDlsm88fnYPmHU6YH3DXu9h\nKX+WlHJQhHF5pepqMBhNUZrkr6HzIPE8CipZ8OUPFU4cQ9fYZd2EmJliWGsh9Cub\nmd83jNlJaq7nGal2VDZM/ZKZ0UL9s8pSoTu/QU2oM2QH2yUUcA5davIGXIVn4+ms\nq53jBySDeDAbHScwrOgm25d3pyA00K7+3DBCncV/pqth7YVD/Yd/5HzXlph6MzXu\nS5fh+Ao/QpC2T1/JDhlvqfWaWueiI2cm5Qk62ZfsMyDl8mCv4vmc5/SFYg879YZN\neg5cDNFnAgMBAAECggEAZCuEVI+RinPwgfLKAre8YiMlFDR6jqaCz46QEHlCGEdY\nwn9crZIayyYiUZEAQ/o4vscJ5H98KBKGlfKnImSI0pAin8S4OiwtkA+fwkHnS0nk\nZfeQ9MDLEigbr10FIstaXNSoW5AVgnjk2u5MHJWrbCG19A+D6rb7SZerm7bAaZmo\nhgPRjfi1u78Lh9AmFEsLDQVUCtlqOPZ2XOq4b6AnGEcasDh5o29EgTNgVf4a9fz/\nEAbDAAXQX3xzmPXsp9lfHDXnFAsw/m1qclgw3GbIhHzEQfxG47OhLO4PWpNcXj4P\n2LB1zNxzSCJyEGeuwOkXVtS7V9cLG3cJR9vlwNFjkQKBgQD9vPAGEEq0nTZXpIyJ\nhMUNF8iLUm3BGcNz2U5eKA2mvLCSTcM3hatPL2jE1zfdwiohDrAkOFtJ6EUn/Blq\nPa+n7L/WV9Kvst/0kQ9KUm7a364ht0kttwWIwyYyXgCgEbcx8Tz65+6AGXX5663j\nM4tfLQA2pc0iY3OCveSLHA178QKBgQDkHtWxuWZ/ijQYclEL6d/njm8N5B5VnK07\nLOWQBAukzlRwYMWQNwOFKweTX758aj+Pvbae5kh+F73jpn9Rv/uyx18CGbI4zBCx\nF5euejcBiin0xplQefS8j3pZDx+bTtre1ckUmm59E/c7rnS6JGE6temQt0niIgTm\ny8f8NJda1wKBgDZO2STDGeo8d+QcUQQiCbb6ry66rskUxZOnIDHg6sMUQcqeoDjj\nAD6LjCYNVmS9aRz4MtUdxtQzxZGAUMQ/fbg4YPr0gyCd7XdAEQC8UgPAull3DE+f\ni6yw8Bz5p7Ka+BXVZ1Lgj1iVmn2qZuZpItx1GkWYCSbiGFgUYrUvhOdRAoGAK0bS\nQYorsMx2P6EIURtIV/SEiv0Y6CL2FkDZOC4cS2K9UCh7snVNXKkiIcpLJ+08K7fQ\n+moznIBCjPqcMtUaGfuKwapATlggXohcRUR4RPmCJia7FTJdxJvvmQ+ubldSXG3w\nXNFDXsU35QGesWWPcITsT4EGKjlL9sD4KpeLkzcCgYEAm7v82/sOzTU9kPEE8mT2\ne9QnozewGC/GbQzFCZjJPQBgXJSgGd4iyvyMHVi6B+0DxR5WGAbYCR7dsnsQkYim\nBnOgQzyy5oOL6ne+Dr07w/iQdP3KeWHotACJBpbmlxAk40Xf1H5IkxpJt+AwqVI0\nmgr24qNIGH1M9fEr4meF/nY=\n-----END PRIVATE KEY-----\n","client_email":"urban-age-form-handler@urban-age-website.iam.gserviceaccount.com","client_id":"118226727016627441012","auth_uri":"https://accounts.google.com/o/oauth2/auth","token_uri":"https://oauth2.googleapis.com/token","auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs","client_x509_cert_url":"https://www.googleapis.com/robot/v1/metadata/x509/urban-age-form-handler%40urban-age-website.iam.gserviceaccount.com","universe_domain":"googleapis.com"}
+{"type":"service_account","project_id":"your-project-id","private_key_id":"YOUR_PRIVATE_KEY_ID","private_key":"-----BEGIN PRIVATE KEY-----\nYOUR_ACTUAL_PRIVATE_KEY_HERE\n-----END PRIVATE KEY-----\n","client_email":"your-service-account@your-project.iam.gserviceaccount.com","client_id":"YOUR_CLIENT_ID","auth_uri":"https://accounts.google.com/o/oauth2/auth","token_uri":"https://oauth2.googleapis.com/token","auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs","client_x509_cert_url":"https://www.googleapis.com/robot/v1/metadata/x509/your-service-account%40your-project.iam.gserviceaccount.com","universe_domain":"googleapis.com"}
 ```
+
+**IMPORTANT:** Keep your actual `google-credentials.json` file secure and never commit it to git.
 
 **After adding all variables:**
 1. Netlify will automatically redeploy the site
