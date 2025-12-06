@@ -1,12 +1,59 @@
-// CRITICAL SAFETY FALLBACK - Ensure page never stays blank for more than 3 seconds
-setTimeout(() => {
-    const videoIntro = document.getElementById('videoIntro');
-    if (videoIntro && !videoIntro.classList.contains('hidden')) {
-        console.warn('Safety fallback triggered - hiding video intro after 3 seconds');
-        videoIntro.classList.add('hidden');
+// ULTRA-CRITICAL SAFETY FALLBACK - Ensure page NEVER stays blank
+// This runs immediately and sets up multiple safety nets
+(function() {
+    'use strict';
+
+    // IMMEDIATE: Allow scrolling in case something goes wrong
+    const ensurePageVisible = () => {
         document.body.style.overflow = '';
+        const videoIntro = document.getElementById('videoIntro');
+        if (videoIntro && !videoIntro.classList.contains('hidden')) {
+            console.warn('Emergency fallback: hiding video intro');
+            videoIntro.classList.add('hidden');
+        }
+    };
+
+    // First fallback: 2 seconds (aggressive for iOS)
+    setTimeout(ensurePageVisible, 2000);
+
+    // Second fallback: 5 seconds (absolute maximum)
+    setTimeout(ensurePageVisible, 5000);
+
+    // Emergency fallback: if page is still not scrollable after 1 second, force it
+    setTimeout(() => {
+        if (document.body.style.overflow === 'hidden') {
+            console.error('Page was stuck with overflow:hidden - forcing fix');
+            document.body.style.overflow = '';
+        }
+    }, 1000);
+})();
+
+// Define playHeroVideos FIRST so it's available for iOS early exit
+function playHeroVideos() {
+    console.log('playHeroVideos called');
+    const heroVideo1 = document.getElementById('heroVideo1');
+    const heroVideo2 = document.getElementById('heroVideo2');
+
+    if (heroVideo1) {
+        heroVideo1.play().catch(e => {
+            console.log('Hero video 1 autoplay failed, trying to play on user interaction:', e);
+            // Retry on first user interaction
+            document.addEventListener('click', () => {
+                heroVideo1.play().catch(err => console.log('Still failed:', err));
+            }, { once: true });
+        });
     }
-}, 3000);
+
+    if (heroVideo2) {
+        heroVideo2.play().catch(e => {
+            console.log('Hero video 2 autoplay failed, trying to play on user interaction:', e);
+            // Retry on first user interaction
+            document.addEventListener('click', () => {
+                heroVideo2.play().catch(err => console.log('Still failed:', err));
+            }, { once: true });
+        });
+    }
+}
 
 // Video Intro Handler
 const videoIntro = document.getElementById('videoIntro');
@@ -14,11 +61,21 @@ const introVideo = document.getElementById('introVideo');
 const tapToStartOverlay = document.getElementById('tapToStartOverlay');
 const tapToStartButton = document.getElementById('tapToStartButton');
 
-// Detect mobile devices
+// Detect mobile devices and iOS specifically
 const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-console.log('Device detection:', isMobile ? 'Mobile' : 'Desktop');
+const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+console.log('Device detection:', isMobile ? 'Mobile' : 'Desktop', isIOS ? '(iOS)' : '');
 
-if (videoIntro && introVideo) {
+// iOS CRITICAL FIX: Skip video intro entirely on iOS to prevent blank page
+if (isIOS && videoIntro) {
+    console.warn('iOS detected - skipping video intro to prevent blank page issues');
+    videoIntro.style.display = 'none'; // Use inline style for immediate effect
+    videoIntro.classList.add('hidden');
+    document.body.style.overflow = '';
+    // Start hero videos immediately on iOS
+    playHeroVideos();
+} else if (videoIntro && introVideo) {
+    // Only run video intro on non-iOS devices
     // Prevent body scroll while video is playing
     document.body.style.overflow = 'hidden';
 
@@ -153,32 +210,6 @@ if (videoIntro && introVideo) {
     // No intro video element found
     document.body.style.overflow = '';
     playHeroVideos();
-}
-
-// Hero Videos Handler
-function playHeroVideos() {
-    const heroVideo1 = document.getElementById('heroVideo1');
-    const heroVideo2 = document.getElementById('heroVideo2');
-
-    if (heroVideo1) {
-        heroVideo1.play().catch(e => {
-            console.log('Hero video 1 autoplay failed, trying to play on user interaction:', e);
-            // Retry on first user interaction
-            document.addEventListener('click', () => {
-                heroVideo1.play().catch(err => console.log('Still failed:', err));
-            }, { once: true });
-        });
-    }
-
-    if (heroVideo2) {
-        heroVideo2.play().catch(e => {
-            console.log('Hero video 2 autoplay failed, trying to play on user interaction:', e);
-            // Retry on first user interaction
-            document.addEventListener('click', () => {
-                heroVideo2.play().catch(err => console.log('Still failed:', err));
-            }, { once: true });
-        });
-    }
 }
 
 // Mobile Navigation Toggle
