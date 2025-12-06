@@ -2,7 +2,11 @@
 const videoIntro = document.getElementById('videoIntro');
 const introVideo = document.getElementById('introVideo');
 
-if (videoIntro && introVideo) {
+// Detect mobile devices
+const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+if (videoIntro && introVideo && !isMobile) {
+    // Desktop: Show intro video
     // Prevent body scroll while video is playing
     document.body.style.overflow = 'hidden';
 
@@ -73,7 +77,12 @@ if (videoIntro && introVideo) {
         fadeOutVideo();
     });
 } else {
-    // If no intro video, start hero videos immediately
+    // Mobile or no intro video: Skip intro and start immediately
+    if (videoIntro) {
+        videoIntro.classList.add('hidden');
+        videoIntro.style.display = 'none';
+    }
+    document.body.style.overflow = '';
     playHeroVideos();
 }
 
