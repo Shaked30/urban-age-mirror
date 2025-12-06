@@ -15,6 +15,7 @@ Thumbs.db
 # Temporary files
 tmp/
 temp/
+new_from_urban/הדמיה מתחם סוסקין פילדלפיה .png
 
 # Environment variables (SENSITIVE - contains API keys!)
 .env
