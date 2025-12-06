@@ -22,6 +22,9 @@ temp/
 .env.local
 .env.*.local
 
+# Secrets documentation (SENSITIVE - contains actual secret values!)
+SECRETS_TO_ADD.md
+
 # Google Service Account credentials (SENSITIVE!)
 *service-account*.json
 credentials.json
