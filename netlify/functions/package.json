@@ -1,0 +1,9 @@
+{
+  "name": "urban-age-functions",
+  "version": "1.0.0",
+  "description": "Netlify Functions for Urban Age",
+  "dependencies": {
+    "resend": "^3.0.0",
+    "googleapis": "^128.0.0"
+  }
+}
