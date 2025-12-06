@@ -34,7 +34,6 @@ urban-age-website-*.json
 
 # Dependencies
 node_modules/
-package-lock.json
 yarn.lock
 
 # Netlify
