@@ -1,0 +1,24 @@
+name: Mirror to Personal Repo
+
+on:
+  push:
+    branches:
+      - main
+      - master
+      - '**'   # mirror all branches
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Mirror repo to personal GitHub
+        run: |
+          git remote add mirror https://$MIRROR_TOKEN@github.com/Shaked30/urban-age-mirror.git
+          git push --mirror mirror
+        env:
+          MIRROR_TOKEN: ${{ secrets.MIRROR_TOKEN }}
