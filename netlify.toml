@@ -1,0 +1,13 @@
+[build]
+  publish = "website"
+  functions = "netlify/functions"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+
+[dev]
+  functions = "netlify/functions"
+  publish = "website"
+  port = 8888

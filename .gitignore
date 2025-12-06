@@ -15,3 +15,24 @@ Thumbs.db
 # Temporary files
 tmp/
 temp/
+
+# Environment variables (SENSITIVE - contains API keys!)
+.env
+.env.local
+.env.*.local
+
+# Google Service Account credentials (SENSITIVE!)
+*service-account*.json
+credentials.json
+google-credentials.json
+*-website-*.json
+urban-age-website-*.json
+
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# Netlify
+.netlify/
+.netlify-cache/

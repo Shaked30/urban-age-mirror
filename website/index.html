@@ -209,11 +209,11 @@
                 </div>
 
                 <div class="contact-form-wrapper">
-                    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form">
-                        <input type="hidden" name="form-name" value="contact">
-                        <p class="hidden">
-                            <label>Don't fill this out: <input name="bot-field"></label>
-                        </p>
+                    <form class="contact-form" id="contact-form">
+                        <!-- Honeypot for spam protection -->
+                        <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                            <input type="text" name="bot-field" tabindex="-1" autocomplete="off">
+                        </div>
 
                         <div class="form-group">
                             <label for="name">שם מלא</label>
@@ -316,5 +316,6 @@
 
     <script src="script.js"></script>
     <script src="cookie-consent.js"></script>
+    <script src="form-handler.js"></script>
 </body>
 </html>
