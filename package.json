@@ -4,7 +4,7 @@
   "description": "Urban Age website with form integration",
   "scripts": {
     "dev": "netlify dev",
-    "build": "echo 'No build step needed for static site'",
+    "build": "npm install",
     "deploy": "netlify deploy --prod"
   },
   "dependencies": {
