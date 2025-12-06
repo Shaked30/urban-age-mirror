@@ -66,16 +66,8 @@ const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
 console.log('Device detection:', isMobile ? 'Mobile' : 'Desktop', isIOS ? '(iOS)' : '');
 
-// iOS CRITICAL FIX: Skip video intro entirely on iOS to prevent blank page
-if (isIOS && videoIntro) {
-    console.warn('iOS detected - skipping video intro to prevent blank page issues');
-    videoIntro.style.display = 'none'; // Use inline style for immediate effect
-    videoIntro.classList.add('hidden');
-    document.body.style.overflow = '';
-    // Start hero videos immediately on iOS
-    playHeroVideos();
-} else if (videoIntro && introVideo) {
-    // Only run video intro on non-iOS devices
+// Run video intro on all devices (including iOS)
+if (videoIntro && introVideo) {
     // Prevent body scroll while video is playing
     document.body.style.overflow = 'hidden';
 
@@ -100,8 +92,6 @@ if (isIOS && videoIntro) {
             playHeroVideos();
         }, 1500); // Match the CSS transition duration
     };
-
-    const fadeTransitionDuration = 1500; // Match CSS transition duration
 
     // Function to start the video
     const startVideo = () => {
@@ -146,6 +136,16 @@ if (isIOS && videoIntro) {
                 tapToStartOverlay.style.display = 'none';
                 startVideo();
             });
+
+            // iOS SAFETY: If user doesn't tap within 3 seconds, auto-skip to prevent blank page
+            if (isIOS) {
+                setTimeout(() => {
+                    if (!videoStarted) {
+                        console.warn('iOS: User did not tap, auto-skipping video to prevent blank page');
+                        fadeOutVideo();
+                    }
+                }, 3000);
+            }
         } else {
             console.error('Tap to start elements not found!');
             // If overlay elements missing, just start video and hope for the best
@@ -160,19 +160,18 @@ if (isIOS && videoIntro) {
         startVideo();
     }
 
-    // Start fade before video ends so it completes exactly when video ends
+    // Wait for video to fully complete before fading
     introVideo.addEventListener('loadedmetadata', () => {
         const videoDuration = introVideo.duration * 1000; // Convert to milliseconds
         console.log('Video duration:', videoDuration / 1000, 'seconds');
 
-        // Start fade 1.5s before video ends, so fade completes when video ends
-        const fadeStartTime = Math.max(0, videoDuration - fadeTransitionDuration);
-        console.log('Fade will start at:', fadeStartTime / 1000, 'seconds');
+        // Start fade AFTER video ends (not before)
+        console.log('Fade will start when video ends at:', videoDuration / 1000, 'seconds');
 
         setTimeout(() => {
-            console.log('Starting fade out');
+            console.log('Video complete, starting fade out');
             fadeOutVideo();
-        }, fadeStartTime);
+        }, videoDuration);
     });
 
     // When video ends, ensure intro is hidden (fade should already be complete)
@@ -186,11 +185,11 @@ if (isIOS && videoIntro) {
         }, 100);
     });
 
-    // Safety fallback: Always fade out after 10 seconds maximum
+    // Safety fallback: Always fade out after 12 seconds maximum (video is ~6s + 1.5s fade + buffer)
     setTimeout(() => {
         console.log('Maximum duration reached, forcing fade out');
         fadeOutVideo();
-    }, 10000);
+    }, 12000);
 
     // Error handling: if video fails to load, fade out immediately
     introVideo.addEventListener('error', () => {
