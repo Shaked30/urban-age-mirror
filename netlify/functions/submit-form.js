@@ -46,6 +46,24 @@ async function sendEmailNotification(formData) {
       </div>
     `;
 
+    // TEST MODE - Just log to console without sending actual email
+    if (process.env.TEST_MODE === 'true') {
+      console.log('=== TEST MODE - Email would be sent ===');
+      console.log('From:', process.env.RESEND_FROM_EMAIL || 'onboarding@resend.dev');
+      console.log('To:', process.env.NOTIFICATION_EMAIL || 'tal@urban-age.com');
+      console.log('Subject:', `שליחת פרטים חדשה מ-${name}`);
+      console.log('Reply-To:', email);
+      console.log('Form Data:', formData);
+      console.log('=====================================');
+      return { success: true, data: { id: 'test-mode', message: 'Test mode - no email sent' } };
+    }
+
+    // Skip if no API key configured
+    if (!process.env.RESEND_API_KEY) {
+      console.warn('RESEND_API_KEY not configured - email not sent');
+      return { success: false, error: 'Resend API key not configured' };
+    }
+
     const data = await resend.emails.send({
       from: process.env.RESEND_FROM_EMAIL || 'onboarding@resend.dev',
       to: process.env.NOTIFICATION_EMAIL || 'tal@urban-age.com',
@@ -69,11 +87,19 @@ async function logToGoogleSheets(formData) {
   try {
     const { name, phone, email, address, hearAbout, consent } = formData;
 
+    // TEST MODE - Just log to console without writing to sheets
+    if (process.env.TEST_MODE === 'true') {
+      console.log('=== TEST MODE - Would log to Google Sheets ===');
+      console.log('Form Data:', formData);
+      console.log('============================================');
+      return { success: true, data: { message: 'Test mode - no sheets logging' } };
+    }
+
     const authClient = await auth.getClient();
     const spreadsheetId = process.env.GOOGLE_SHEET_ID;
 
     if (!spreadsheetId) {
-      console.warn('Google Sheet ID not configured');
+      console.warn('Google Sheet ID not configured - skipping sheets logging');
       return { success: false, error: 'Sheet ID not configured' };
     }
 
