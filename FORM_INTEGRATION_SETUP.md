@@ -151,6 +151,26 @@ RESEND_API_KEY=re_xxxxxxxxxxxxxxxxxxxx
 
 ## Part 3: Netlify Deployment & Configuration
 
+### Deployment Options
+
+**🎯 RECOMMENDED: GitHub Actions Deployment**
+
+For automated deployments with environment variables stored securely in GitHub Secrets:
+
+👉 **See [GITHUB_DEPLOYMENT_GUIDE.md](GITHUB_DEPLOYMENT_GUIDE.md)** for complete instructions.
+
+This method:
+- ✅ Stores secrets in GitHub (more secure)
+- ✅ Automatic deployment on every push
+- ✅ Better for team collaboration
+- ✅ Easier to manage environment variables
+
+---
+
+**Alternative: Direct Netlify Deployment**
+
+If you prefer to configure environment variables directly in Netlify:
+
 ### Step 1: Install Dependencies
 
 First, install the required packages:
@@ -162,7 +182,7 @@ npm install
 
 ### Step 2: Deploy to Netlify
 
-**Option A: Deploy via Git (Recommended)**
+**Option A: Deploy via Git**
 
 1. Make sure your code is committed to Git:
    ```bash
@@ -191,7 +211,7 @@ netlify init
 netlify deploy --prod
 ```
 
-### Step 3: Configure Environment Variables
+### Step 3: Configure Environment Variables (Netlify Dashboard Method)
 
 1. In Netlify dashboard, go to your site
 2. Navigate to **Site settings** → **Environment variables**

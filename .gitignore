@@ -40,3 +40,6 @@ yarn.lock
 
 # Large media files
 new_from_urban/הדמיה מתחם סוסקין פילדלפיה .png
+
+# Videos (original copies - deployed versions are in website/assets/)
+/AI_Generated_videos/
