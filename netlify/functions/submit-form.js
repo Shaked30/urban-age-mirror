@@ -1,8 +1,14 @@
 const { Resend } = require('resend');
 const { google } = require('googleapis');
 
-// Initialize Resend
-const resend = new Resend(process.env.RESEND_API_KEY);
+// Initialize Resend (lazy initialization to avoid crash if API key missing)
+let resend = null;
+function getResend() {
+  if (!resend && process.env.RESEND_API_KEY) {
+    resend = new Resend(process.env.RESEND_API_KEY);
+  }
+  return resend;
+}
 
 // Initialize Google Sheets
 const auth = new google.auth.GoogleAuth({
@@ -59,12 +65,13 @@ async function sendEmailNotification(formData) {
     }
 
     // Skip if no API key configured
-    if (!process.env.RESEND_API_KEY) {
+    const resendClient = getResend();
+    if (!resendClient) {
       console.warn('RESEND_API_KEY not configured - email not sent');
       return { success: false, error: 'Resend API key not configured' };
     }
 
-    const data = await resend.emails.send({
+    const data = await resendClient.emails.send({
       from: process.env.RESEND_FROM_EMAIL || 'onboarding@resend.dev',
       to: process.env.NOTIFICATION_EMAIL || 'tal@urban-age.com',
       subject: `שליחת פרטים חדשה מ-${name}`,
