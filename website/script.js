@@ -1,16 +1,18 @@
 // Video Intro Handler
 const videoIntro = document.getElementById('videoIntro');
 const introVideo = document.getElementById('introVideo');
+const tapToStartOverlay = document.getElementById('tapToStartOverlay');
+const tapToStartButton = document.getElementById('tapToStartButton');
 
 // Detect mobile devices
 const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
-if (videoIntro && introVideo && !isMobile) {
-    // Desktop: Show intro video
+if (videoIntro && introVideo) {
     // Prevent body scroll while video is playing
     document.body.style.overflow = 'hidden';
 
     let hasStartedFadeOut = false;
+    let videoStarted = false;
 
     // When video ends or on error, fade out
     const fadeOutVideo = () => {
@@ -32,6 +34,48 @@ if (videoIntro && introVideo && !isMobile) {
     };
 
     const fadeTransitionDuration = 1500; // Match CSS transition duration
+
+    // Function to start the video
+    const startVideo = () => {
+        if (videoStarted) return;
+        videoStarted = true;
+
+        console.log('Starting video...');
+
+        // Hide tap to start overlay
+        if (tapToStartOverlay) {
+            tapToStartOverlay.classList.add('hidden');
+        }
+
+        // Try to play the video
+        const playPromise = introVideo.play();
+
+        if (playPromise !== undefined) {
+            playPromise
+                .then(() => {
+                    console.log('Video playing successfully');
+                })
+                .catch(error => {
+                    console.error('Video play failed:', error);
+                    // If play fails, skip to main content
+                    fadeOutVideo();
+                });
+        }
+    };
+
+    // Mobile: Show tap-to-start button
+    if (isMobile && tapToStartOverlay && tapToStartButton) {
+        console.log('Mobile detected - showing tap to start button');
+        tapToStartOverlay.classList.remove('hidden');
+
+        tapToStartButton.addEventListener('click', (e) => {
+            e.stopPropagation();
+            startVideo();
+        });
+    } else {
+        // Desktop: Auto-start (existing behavior)
+        startVideo();
+    }
 
     // Start fade before video ends so it completes exactly when video ends
     introVideo.addEventListener('loadedmetadata', () => {
@@ -66,22 +110,21 @@ if (videoIntro && introVideo && !isMobile) {
     }, 10000);
 
     // Error handling: if video fails to load, fade out immediately
-    introVideo.addEventListener('error', (e) => {
-        console.error('Video failed to load:', e);
+    introVideo.addEventListener('error', () => {
+        console.error('Video failed to load');
         fadeOutVideo();
     });
 
-    // Allow users to skip by clicking anywhere
+    // Allow users to skip by clicking anywhere (not on the button)
     videoIntro.addEventListener('click', (e) => {
-        console.log('User clicked to skip');
-        fadeOutVideo();
+        // Don't skip if clicking the button
+        if (e.target !== tapToStartButton && videoStarted) {
+            console.log('User clicked to skip');
+            fadeOutVideo();
+        }
     });
 } else {
-    // Mobile or no intro video: Skip intro and start immediately
-    if (videoIntro) {
-        videoIntro.classList.add('hidden');
-        videoIntro.style.display = 'none';
-    }
+    // No intro video element found
     document.body.style.overflow = '';
     playHeroVideos();
 }
