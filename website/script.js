@@ -27,20 +27,32 @@ if (videoIntro && introVideo) {
         }, 1500); // Match the CSS transition duration
     };
 
-    // Fade out when video ends
-    introVideo.addEventListener('ended', () => {
-        console.log('Video ended');
-        fadeOutVideo();
-    });
+    const fadeTransitionDuration = 1500; // Match CSS transition duration
 
-    // Fallback: fade out after video duration + small buffer (in case ended event doesn't fire)
+    // Start fade before video ends so it completes exactly when video ends
     introVideo.addEventListener('loadedmetadata', () => {
         const videoDuration = introVideo.duration * 1000; // Convert to milliseconds
         console.log('Video duration:', videoDuration / 1000, 'seconds');
+
+        // Start fade 1.5s before video ends, so fade completes when video ends
+        const fadeStartTime = Math.max(0, videoDuration - fadeTransitionDuration);
+        console.log('Fade will start at:', fadeStartTime / 1000, 'seconds');
+
         setTimeout(() => {
-            console.log('Fallback timer triggered');
+            console.log('Starting fade out');
             fadeOutVideo();
-        }, videoDuration + 500);
+        }, fadeStartTime);
+    });
+
+    // When video ends, ensure intro is hidden (fade should already be complete)
+    introVideo.addEventListener('ended', () => {
+        console.log('Video ended');
+        // Ensure the hidden class is applied
+        setTimeout(() => {
+            videoIntro.classList.add('hidden');
+            document.body.style.overflow = '';
+            playHeroVideos();
+        }, 100);
     });
 
     // Safety fallback: Always fade out after 10 seconds maximum
