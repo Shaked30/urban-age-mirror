@@ -1,3 +1,13 @@
+// CRITICAL SAFETY FALLBACK - Ensure page never stays blank for more than 3 seconds
+setTimeout(() => {
+    const videoIntro = document.getElementById('videoIntro');
+    if (videoIntro && !videoIntro.classList.contains('hidden')) {
+        console.warn('Safety fallback triggered - hiding video intro after 3 seconds');
+        videoIntro.classList.add('hidden');
+        document.body.style.overflow = '';
+    }
+}, 3000);
+
 // Video Intro Handler
 const videoIntro = document.getElementById('videoIntro');
 const introVideo = document.getElementById('introVideo');
@@ -6,6 +16,7 @@ const tapToStartButton = document.getElementById('tapToStartButton');
 
 // Detect mobile devices
 const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+console.log('Device detection:', isMobile ? 'Mobile' : 'Desktop');
 
 if (videoIntro && introVideo) {
     // Prevent body scroll while video is playing
@@ -64,19 +75,31 @@ if (videoIntro && introVideo) {
     };
 
     // Mobile: Show tap-to-start button
-    if (isMobile && tapToStartOverlay && tapToStartButton) {
+    if (isMobile) {
         console.log('Mobile detected - showing tap to start button');
-        tapToStartOverlay.style.display = 'flex';
 
-        tapToStartButton.addEventListener('click', (e) => {
-            e.stopPropagation();
-            tapToStartOverlay.style.display = 'none';
+        if (tapToStartOverlay && tapToStartButton) {
+            tapToStartOverlay.style.display = 'flex';
+            tapToStartOverlay.style.opacity = '1';
+            console.log('Tap to start overlay is now visible');
+
+            tapToStartButton.addEventListener('click', (e) => {
+                e.stopPropagation();
+                console.log('Tap to start button clicked');
+                tapToStartOverlay.style.display = 'none';
+                startVideo();
+            });
+        } else {
+            console.error('Tap to start elements not found!');
+            // If overlay elements missing, just start video and hope for the best
             startVideo();
-        });
+        }
     } else {
         // Desktop: Auto-start (existing behavior)
         console.log('Desktop detected - auto-starting video');
-        tapToStartOverlay.style.display = 'none';
+        if (tapToStartOverlay) {
+            tapToStartOverlay.style.display = 'none';
+        }
         startVideo();
     }
 
