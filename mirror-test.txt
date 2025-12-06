@@ -1,4 +1,0 @@
-Mirror test - testing auto-mirror to urban-age-mirror repo
-Timestamp: 2025-12-06
-Test #2 - After updating MIRROR_TOKEN secret
-Test #3 - With workflow scope added
